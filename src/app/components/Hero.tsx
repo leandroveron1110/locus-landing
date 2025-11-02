@@ -87,9 +87,9 @@ export const Hero: React.FC = () => (
 
         {/* TEXTO DE LOGÍSTICA CORREGIDO: Enfatiza la integración y la elección */}
         <p className="mt-4 text-lg font-medium text-[#242323]">
-          Locus está hecho para tu negocio local:{" "}
-          <strong>Integramos las cadeterías locales</strong> para que tu cliente
-          final siempre elija la opción que más le convenga.
+          Locus está diseñado para que tu negocio o emprendimiento crezca:
+          conectamos con cadeterías locales para que tu cliente siempre tenga la
+          mejor opción.
         </p>
 
         {/* Botones CTA */}
