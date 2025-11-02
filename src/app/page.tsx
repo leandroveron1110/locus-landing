@@ -17,8 +17,8 @@ export default function Home() {
           <HowItWorks />
           <ComparisonCards />
         </div>
-      </main>
       <CTA />
+      </main>
       <Footer />
     </div>
   );
