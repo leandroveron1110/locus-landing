@@ -3,7 +3,6 @@ import {
   Zap,
   TrendingUp,
   Handshake,
-  DollarSign,
   Wallet,
   LucideIcon,
 } from "lucide-react";
@@ -32,9 +31,16 @@ const FeatureStep: React.FC<FeatureStepProps> = ({
 }) => (
   <li className="flex gap-3 sm:gap-4 items-start p-3 sm:p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
     <div className="flex-shrink-0">
-      <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#1E931E] text-white flex items-center justify-center font-semibold text-base sm:text-lg shadow-md">
-        {number}
-      </span>
+<span
+  className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 
+  bg-[#1E931E] text-white font-semibold text-base sm:text-lg shadow-md
+  [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)]"
+>
+  {number}
+</span>
+
+
+
     </div>
     <div>
       <h3 className="text-base sm:text-lg font-semibold text-gray-800 flex items-center space-x-2">
@@ -180,3 +186,7 @@ export const HowItWorks: React.FC = () => {
     </section>
   );
 };
+
+
+
+
