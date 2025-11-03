@@ -5,47 +5,59 @@ export const CTA: React.FC = () => {
   return (
     <section
       id="agendar"
-      // Se mantiene el fondo oscuro, padding y centrado
-      className="bg-[#242323] p-8 sm:p-10 lg:p-12 mt-10 shadow-2xl " 
+      className="bg-[#242323] p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden"
     >
-      <div className="md:flex md:justify-between md:items-center"> {/* items-center asegura alineación vertical */}
+      {/* Fondo decorativo sutil */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#1E931E20] to-transparent pointer-events-none"></div>
+
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
         
-        {/* Bloque de Texto y Propuesta de Valor */}
-        <div className="text-white max-w-xl">
-          <h3 className="text-2xl sm:text-3xl font-extrabold flex items-center space-x-3">
-            <CalendarCheck className="w-8 h-8 text-[#1E931E] flex-shrink-0" />
-            <span>¿Querés ver Locus en acción?</span>
+        {/* Texto principal */}
+        <div className="text-white max-w-2xl">
+          <h3 className="flex flex-wrap items-center gap-2 sm:gap-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3">
+            <CalendarCheck className="text-[#1E931E] w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0" />
+            <span>
+              ¿Querés ver{" "}
+              <span className="bg-gradient-to-r from-[#1E931E] to-[#7ED957] text-transparent bg-clip-text">
+                Locus en acción?
+              </span>
+            </span>
           </h3>
-          <p className="mt-3 text-[#BFBFBF] text-lg">
-            Agendá una <strong>demo personalizada y gratuita</strong>. Te mostramos cómo funciona
-            nuestro sistema sin comisiones y resolvemos todas tus dudas en solo
-            15 minutos.
+          <p className="text-[#CCCCCC] text-base sm:text-lg leading-relaxed">
+            Agendá una <strong>demo personalizada y gratuita</strong>. Te mostramos cómo funciona 
+            nuestro sistema <strong>sin comisiones</strong> y resolvemos todas tus dudas en solo 
+            <strong> 15 minutos.</strong>
           </p>
         </div>
 
-        {/* Bloque de Botones de acción (Solo WhatsApp) */}
-        <div className="mt-8 md:mt-0 flex flex-col sm:flex-row md:items-center">
-          
-          {/* Botón Principal: WhatsApp (Ajustado a font-semibold text-lg) */}
+        {/* Botón principal */}
+        <div className="flex justify-center md:justify-end">
           <a
             href="https://wa.me/5493442675388?text=Hola%20quiero%20una%20demo%20de%20Locus"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center space-x-2 px-6 py-3 bg-green-500 text-white rounded-xl font-semibold text-lg shadow-lg transition duration-300 transform hover:scale-[1.05] hover:bg-green-600 min-w-[200px]"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#1E931E] to-[#23B923] text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.05] focus:ring-2 focus:ring-[#23B923] focus:ring-offset-2 focus:ring-offset-[#242323]"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
             <span>Demo por WhatsApp</span>
           </a>
         </div>
       </div>
 
-      {/* Mensaje adicional de Opción VIP */}
-      <div className="mt-8 pt-6 border-t border-[#333333] text-sm text-[#BFBFBF] flex items-center space-x-2 justify-center">
-        <MapPin className="w-4 h-4 text-[#BFBFBF] flex-shrink-0" />
-        <span className="text-center">
-          Opción VIP: También podemos visitar tu local y hacer la demo in situ
-          (disponible en <strong>Concepción del Uruguay, Entre Ríos</strong>).
-        </span>
+      {/* Opción VIP */}
+      <div className="mt-10 pt-6 border-t border-[#333333] text-center text-[#BFBFBF] text-xs sm:text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 leading-relaxed">
+          <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#BFBFBF]" />
+          <span>
+            <strong>Opción VIP:</strong> También podemos visitar tu local y hacer la demo in situ.{" "}
+            <span className="block sm:inline">
+              Disponible en{" "}
+              <strong className="text-white">
+                Concepción del Uruguay, Entre Ríos
+              </strong>.
+            </span>
+          </span>
+        </div>
       </div>
     </section>
   );

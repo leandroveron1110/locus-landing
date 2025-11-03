@@ -10,7 +10,7 @@ import { BeforeAfterLocus } from "./components/BeforeAfterLocus";
 export default function Home() {
   return (
     <div>
-      <main className="bg-[#F5F8EB] mb-8 ">
+      <main className="bg-[#F5F8EB] ">
         {/* Container */}
         <Hero />
         <div className="max-w-6xl mx-auto px-2 py-1">
@@ -19,8 +19,8 @@ export default function Home() {
           <HowItWorks />
           <ComparisonCards />
         </div>
-      <CTA />
       </main>
+      <CTA />
       <Footer />
     </div>
   );

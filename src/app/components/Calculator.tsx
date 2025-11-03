@@ -28,7 +28,7 @@ const CardValue: React.FC<CardValueProps> = ({
 }) => (
   // Clase de altura mínima (min-h-full) para asegurar que ambas tarjetas tengan la misma altura
   <div
-    className={`p-3 sm:p-4 rounded-xl border ${colorClass} bg-[#F5F8EB] transition duration-300 hover:shadow-md h-full min-h-32`} 
+    className={`p-3 sm:p-4 rounded-xl border ${colorClass} bg-[#F5F8EB] transition duration-300 hover:shadow-md h-full min-h-32`}
   >
     <div className="flex justify-between items-start">
       {/* Reducción de tamaño de texto de etiqueta en móvil (text-xs) */}
@@ -54,10 +54,10 @@ const CardValue: React.FC<CardValueProps> = ({
 );
 
 export const Calculator: React.FC = () => {
-  const [ventasInput, setVentasInput] = useState<string>("500.000");
+  const [ventasInput, setVentasInput] = useState<string>("1.500.000");
   const COMPETENCIA_OPTIONS = [20, 25, 30, 35];
   const [competenciaPorcentaje, setCompetenciaPorcentaje] = useState<number>(
-    COMPETENCIA_OPTIONS[1]
+    COMPETENCIA_OPTIONS[2]
   );
 
   const {
@@ -102,7 +102,6 @@ export const Calculator: React.FC = () => {
   return (
     // Reducción del max-w-xl a max-w-lg en desktop para un mejor foco visual
     <div className="bg-[#F5F8EB] p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-lg mx-auto border-t-8 border-[#DD0C21] font-sans">
-      
       {/* Encabezado */}
       <div className="flex items-start space-x-3 mb-6 border-b pb-4 border-[#BFBFBF]">
         <TrendingUp className="w-7 h-7 text-[#DD0C21] flex-shrink-0 mt-1" />
@@ -187,7 +186,7 @@ export const Calculator: React.FC = () => {
         </h4>
 
         {/* Las CardValue ya tienen ajustes de responsividad interna */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4"> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <CardValue
             label="Costo con Locus"
             value={formatPrice(tarifaLocusARS)}
@@ -212,7 +211,7 @@ export const Calculator: React.FC = () => {
               ¡Ahorro Neto al Elegir Locus!
             </h5>
             {/* TAMAÑO RESPONSIVE: Usa un tamaño menor en móvil para números grandes */}
-            <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E931E] mt-2 block truncate">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E931E] mt-2 block truncate">
               {formatPrice(ahorroARS)}
             </span>
             {ahorroARS > 0 && (
