@@ -1,7 +1,7 @@
 // ./components/Hero.tsx
 import React from "react";
 import { ArrowRight, CalendarCheck, Zap } from "lucide-react";
-import img from "../../../public/fondo.png";
+import img from "../../../public/panal.svg";
 import logo from "../../../public/favicon.svg";
 
 export const Hero: React.FC = () => (
@@ -67,10 +67,20 @@ export const Hero: React.FC = () => (
     </div>
 
     <section className="grid md:grid-cols-2 gap-12 items-center ">
-      <div className="w-full h-96 shadow-none lg:shadow-2xl overflow-hidden bg-[#F5F8EB] flex items-center justify-center order-1 lg:order-1 lg:rounded-3xl">
+      {/* Imagen solo visible en mobile (cuando el otro div está oculto) */}
+      <div className="flex md:hidden w-full h-96 bg-[#F5F8EB] items-center justify-center rounded-3xl">
+        <img
+          src={logo.src}
+          alt="Logo de Locus - versión mobile"
+          className="h-full w-auto object-contain p-8"
+        />
+      </div>
+
+      {/* Imagen solo visible en desktop (cuando el anterior está oculto) */}
+      <div className="hidden md:flex w-full h-96 shadow-2xl bg-[#F5F8EB] items-center justify-center rounded-3xl">
         <img
           src={img.src}
-          alt="Logo de Locus - Tu plataforma sin comisiones"
+          alt="Logo de Locus - versión desktop"
           className="h-full w-auto object-contain p-8"
         />
       </div>
