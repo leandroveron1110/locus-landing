@@ -9,7 +9,6 @@ import {
   Megaphone,
   // Íconos de Después (Soluciones)
   Rocket, // Ícono para el título "Con Locus"
-  CheckCircle, // Nuevo ícono para los items de "Con Locus"
   Users,
   Wallet,
   BarChart,
