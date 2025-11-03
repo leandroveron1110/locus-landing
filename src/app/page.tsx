@@ -5,6 +5,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { ComparisonCards } from "./components/Comparison";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
+import { BeforeAfterLocus } from "./components/BeforeAfterLocus";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <div className="max-w-6xl mx-auto px-2 py-1">
           <Calculator />
+          <BeforeAfterLocus />
           <HowItWorks />
           <ComparisonCards />
         </div>
