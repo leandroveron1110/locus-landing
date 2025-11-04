@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Locus",
     images: [
       {
-        url: "/fondo.png", // ruta de la imagen que querés mostrar al compartir
+        url: "/fondo_link.png", // ruta de la imagen que querés mostrar al compartir
         width: 1200,
         height: 630,
         alt: "Locus - Tu negocio sin comisiones",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Locus",
     description: "La plataforma para negocios, tu negocio crece, nosotros crecemos con vos. Sin comisiones por venta, tarifa progresiva basada en objetivos.",
-    images: ["/fondo.png"],
+    images: ["/fondo_link.png"],
   },
 };
 
