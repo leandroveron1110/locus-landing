@@ -7,6 +7,8 @@ import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import { BeforeAfterLocus } from "./components/BeforeAfterLocus";
 import { ManualManagementProblem } from "./components/ManualManagementProblem";
+import { MoreThanCommissions } from "./components/MoreThanCommissions";
+import { PainPointsSection } from "./components/PainPointsSection";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
           <ManualManagementProblem />
           <Calculator />
           <BeforeAfterLocus />
+          <PainPointsSection />
+          <MoreThanCommissions />
           <HowItWorks />
           <ComparisonCards />
         </div>
