@@ -9,6 +9,7 @@ import { BeforeAfterLocus } from "./components/BeforeAfterLocus";
 import { ManualManagementProblem } from "./components/ManualManagementProblem";
 import { MoreThanCommissions } from "./components/MoreThanCommissions";
 import { PainPointsSection } from "./components/PainPointsSection";
+import { LocationsInProgress } from "./components/LocationsInProgress";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <MoreThanCommissions />
           <HowItWorks />
           <ComparisonCards />
+          <LocationsInProgress />
         </div>
       </main>
       <CTA />
