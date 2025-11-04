@@ -39,15 +39,20 @@ const locales: Local[] = [
     image: "/urbanfood.png",
     category: "Comidas rápidas",
   },
-    {
+  {
     name: "Otra Historia Mas",
     image: "/otrahitoriamas.png",
     category: "Rotisería",
   },
-      {
+  {
     name: "Hamburgo",
     image: "/hamburgo.png",
     category: "Hamburguesería y Sandwichería",
+  },
+  {
+    name: "Pimienta Resto",
+    image: "/pimienta_resto.jpeg",
+    category: "Restaurante",
   },
 ];
 
