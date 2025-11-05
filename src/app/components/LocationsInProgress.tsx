@@ -1,6 +1,5 @@
 // src/components/LocationsInProgress.tsx
 import React from "react";
-import { Hammer } from "lucide-react"; // icono de lucide-react
 
 interface Local {
   name: string;
@@ -61,7 +60,6 @@ export const LocationsInProgress: React.FC = () => {
     <section className="py-16 px-6 text-center bg-[#f8f8f8]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <Hammer className="w-6 h-6 text-[#450c1f]" aria-hidden />
           <h2 className="text-3xl font-bold text-[#210110]">
             Locales en proceso de incorporación
           </h2>
