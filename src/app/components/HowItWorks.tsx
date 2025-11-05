@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Zap,
-  TrendingUp,
-  Handshake,
-  Wallet,
-  LucideIcon,
-} from "lucide-react";
+import { Zap, TrendingUp, Handshake, Wallet, LucideIcon } from "lucide-react";
 
 // NOTA: Reemplaza esta línea con la importación real de tu valor.
 const TARIFA_BASE: number = 35;
 
 interface FeatureStepProps {
-  number: number;
   title: string;
   description: string;
   icon: LucideIcon;
@@ -24,27 +17,23 @@ interface PricingItem {
 }
 
 const FeatureStep: React.FC<FeatureStepProps> = ({
-  number,
   title,
   description,
   icon: Icon,
 }) => (
   <li className="flex gap-3 sm:gap-4 items-start p-3 sm:p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
     <div className="flex-shrink-0">
-<span
-  className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 
+      <span
+        className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 
   bg-[#1E931E] text-white font-semibold text-base sm:text-lg shadow-md
   [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)]"
->
-  {number}
-</span>
-
-
-
+      >
+        {Icon && <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#fff]" />}
+      </span>
     </div>
     <div>
       <h3 className="text-base sm:text-lg font-semibold text-gray-800 flex items-center space-x-2">
-        {Icon && <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E931E]" />}
+        {/* {number}.  */}
         <span>{title}</span>
       </h3>
       <p className="text-sm sm:text-base text-gray-600 mt-1 leading-relaxed">
@@ -105,19 +94,16 @@ export const HowItWorks: React.FC = () => {
 
             <ul className="mt-6 space-y-3 sm:space-y-4">
               <FeatureStep
-                number={1}
                 title="Transparencia Total"
                 description="Sabés exactamente cuánto vas a pagar según tus objetivos de venta. ¡Cero sorpresas!"
                 icon={Handshake}
               />
               <FeatureStep
-                number={2}
                 title="Crecimiento Escalonado"
                 description="Pagás más solo cuando tu negocio crece y aumenta sus ventas. Costos controlados."
                 icon={TrendingUp}
               />
               <FeatureStep
-                number={3}
                 title="Margen 100% Tuyo"
                 description="Mantenés el control total de tus precios y retenés el 100% de tu margen de ganancia."
                 icon={Wallet}
@@ -186,7 +172,3 @@ export const HowItWorks: React.FC = () => {
     </section>
   );
 };
-
-
-
-
