@@ -112,7 +112,7 @@ export const CommunityGrowthSection: React.FC = () => {
             href="#agendar"
             className="inline-block mt-6 sm:mt-8 bg-[#feffd5] text-[#210110] font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-10 rounded-full shadow-xl hover:bg-white transition transform hover:scale-105"
           >
-            Quiero sumar mi negocio y mis clientes
+            Quiero sumar mi negocio
           </a>
         </div>
       </div>
