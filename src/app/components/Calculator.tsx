@@ -101,7 +101,7 @@ export const Calculator: React.FC = () => {
 
   return (
     // Reducción del max-w-xl a max-w-lg en desktop para un mejor foco visual
-    <div className="bg-[#F5F8EB] p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-lg mx-auto border-t-8 border-[#DD0C21] font-sans">
+    <div className="bg-[#F5F8EB] mt-16 mb-16 p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-lg mx-auto border-t-8 border-[#DD0C21] font-sans">
       {/* Encabezado */}
       <div className="flex items-start space-x-3 mb-6 border-b pb-4 border-[#BFBFBF]">
         <TrendingUp className="w-7 h-7 text-[#DD0C21] flex-shrink-0 mt-1" />

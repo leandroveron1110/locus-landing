@@ -1,165 +1,144 @@
 "use client";
 import React from "react";
 import {
-  DollarSign,
-  TrendingDown,
-  Clock,
-  AlertTriangle,
-  Truck,
-  Network,
-  BarChart3,
-  Layers,
-  EyeOff,
-  Lock,
-  Smile,
-  Gift,
-  Settings,
-  Users,
-  UserCheck,
+  DollarSign, // Costo N° 1: Altas Comisiones
+  TrendingDown, // Margen Reducido
+  Clock, // Caos Operativo
+  AlertTriangle, // Errores por Gestión Manual
+  Truck, // Logística Manual
+  EyeOff, // Costos Ocultos
+  BarChart3, // Falta de Datos y Fidelización
+  Layers, // Costos que Crecen al Escalar
+  Network, // Dependencia de Algoritmos
 } from "lucide-react";
 
-
-const painPoints = [
+// Array de Puntos de Dolor Priorizados (9 puntos)
+const optimizedPainPoints = [
   {
     icon: DollarSign,
-    title: "Altas comisiones por venta",
-    problem: "Las plataformas te quitan parte de cada venta.",
-    solution: "Con Locus conservás el 100% de tu ganancia.",
+    title: "Costo N° 1: Altas Comisiones",
+    problem: "Las plataformas te quitan hasta el 30% de cada venta.",
+    solution: "Retenés el 100% de tu margen. ¡Cero comisión por pedido!",
   },
   {
     icon: TrendingDown,
-    title: "Margen reducido y precios forzados a subir",
-    problem: "Tenés que aumentar precios para no perder margen.",
-    solution: "Pagás una tarifa fija, sin porcentajes por pedido.",
+    title: "Margen Reducido y Precios Inflados",
+    problem: "Te ves forzado a subir tus precios para mantener la ganancia.",
+    solution: "Pagás una tarifa fija y transparente, sin porcentajes.",
   },
   {
     icon: Clock,
-    title: "Tiempo perdido gestionando pedidos",
-    problem: "Tomás pedidos por WhatsApp o llamadas todo el día.",
-    solution: "Locus automatiza pedidos y notificaciones.",
+    title: "Caos Operativo y Pérdida de Tiempo",
+    problem:
+      "Tu equipo pierde horas gestionando pedidos por WhatsApp/llamadas.",
+    solution: "Locus automatiza pedidos, notificaciones y flujo de venta.",
   },
   {
     icon: AlertTriangle,
-    title: "Errores en pedidos o comunicación",
-    problem: "Confusiones en sabores, talles o direcciones.",
-    solution: "Todo se carga automáticamente, sin errores manuales.",
+    title: "Errores por Gestión Manual",
+    problem:
+      "Confusiones en sabores, talles o direcciones que frustran al cliente.",
+    solution: "Todo se carga automáticamente, eliminando los errores humanos.",
   },
   {
     icon: Truck,
-    title: "Problemas con la logística y cadeterías",
-    problem: "Coordinar envíos lleva tiempo y genera demoras.",
-    solution: "Integración con cadeterías locales, sin esfuerzo.",
+    title: "Logística Manual y Demoras",
+    problem: "Coordinar envíos y cadeterías es un cuello de botella constante.",
+    solution:
+      "Integración simple con cadeterías locales, sin esfuerzo de tu parte.",
   },
   {
     icon: Network,
-    title: "Dependencia de redes sociales",
-    problem: "Dependés de los algoritmos para que te encuentren.",
-    solution: "Los clientes te buscan directo en la plataforma.",
+    title: "Dependencia de Algoritmos",
+    problem:
+      "Dependés de la publicidad pagada y el algoritmo de las redes para que te encuentren.",
+    solution:
+      "Los clientes te buscan directamente en la plataforma: es tráfico de calidad.",
   },
   {
     icon: BarChart3,
-    title: "No conocés a tus clientes",
-    problem: "Sin datos, no sabés qué productos funcionan mejor.",
-    solution: "Locus te da estadísticas y feedback reales.",
+    title: "Falta de Datos y Fidelización",
+    problem:
+      "Sin información, no sabés qué vendés más ni cómo retener a tus clientes.",
+    solution:
+      "Locus te da estadísticas y feedback real para crear promociones efectivas.",
   },
   {
     icon: Layers,
-    title: "Difícil escalar sin costos crecientes",
-    problem: "A más ventas, más comisiones.",
-    solution: "Pagás más solo cuando tu negocio crece.",
+    title: "Costos que Crecen al Escalar",
+    problem: "A medida que vendés más, más pagás en comisiones (sin límite).",
+    solution:
+      "Tu costo aumenta solo cuando superás un umbral de venta, ¡siempre previsible!",
   },
   {
     icon: EyeOff,
-    title: "Costos ocultos e imprevisibles",
-    problem: "Nunca sabés cuánto te va a costar vender.",
-    solution: "Transparencia total con tarifas fijas mensuales.",
-  },
-  {
-    icon: Lock,
-    title: "Pérdida de control sobre precios y marca",
-    problem: "Las plataformas definen tu visibilidad y tus precios.",
-    solution: "Con Locus tenés control total de tu negocio.",
-  },
-  {
-    icon: Smile,
-    title: "Mala experiencia del cliente",
-    problem: "Demoras y desorganización afectan la satisfacción.",
-    solution: "Pedidos automáticos y seguimiento simple.",
-  },
-  {
-    icon: Gift,
-    title: "No podés fidelizar ni crear promociones efectivas",
-    problem: "Sin información, no sabés cómo retener clientes.",
-    solution: "Conocé hábitos y ofrecé descuentos personalizados.",
-  },
-  {
-    icon: Settings,
-    title: "Falta de herramientas centralizadas",
-    problem: "Todo está disperso en mensajes y planillas.",
-    solution: "Unificá ventas, clientes y envíos en una sola app.",
-  },
-  {
-    icon: Users,
-    title: "Dependencia de personal o encargados",
-    problem: "Si el encargado no está, el negocio se frena.",
-    solution: "Todo queda registrado y funciona sin depender de nadie.",
-  },
-  {
-    icon: UserCheck,
-    title: "Falta de tiempo para hacer crecer el negocio",
-    problem: "La gestión diaria te consume todo el día.",
-    solution: "Automatizá lo operativo y enfocáte en crecer.",
+    title: "Costos Ocultos e Impredecibles",
+    problem:
+      "Nunca sabés exactamente cuánto te va a costar vender el próximo mes.",
+    solution:
+      "Transparencia total con tarifas fijas mensuales según tu volumen.",
   },
 ];
 
-
-export const PainPointsSection: React.FC = () => {
+export const OptimizedPainPointsSection: React.FC = () => {
   return (
-    <section className="bg-[#F5F8EB] py-20">
+    // Fondo más neutro para mejor contraste con las tarjetas
+    <section className="bg-white py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-6">
-        {/* CABECERA - REFACTORIZADA */}
-        <div className="text-center mb-12">
+        {/* CABECERA */}
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#210110] mb-4">
             Los <strong>dolores reales</strong> de los negocios locales
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Entendemos lo que enfrentás todos los días. Por eso diseñamos{" "}
+            Entendemos lo que enfrentás. Por eso, diseñamos{" "}
             <span className="font-semibold text-[#9e2d49]">Locus</span> para
-            <strong className="text-[#9e2d49]"> eliminar uno por uno</strong> los
+            eliminar <strong className="text-[#9e2d49]">uno por uno</strong> los
             desafíos que frenan tu crecimiento.
           </p>
         </div>
-        {/* FIN CABECERA */}
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {painPoints.map(({ icon: Icon, title, problem, solution }, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Ícono y Título */}
-              <div className="flex items-center mb-4">
-                <div className="bg-[#9e2d49]/10 p-3 rounded-full mr-3">
-                  <Icon className="text-[#9e2d49] w-6 h-6" />
+        {/* CUERPO DE TARJETAS (9 PUNTOS) */}
+        {/* Usamos lg:grid-cols-3, idealmente 3x3 */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {optimizedPainPoints.map(
+            ({ icon: Icon, title, problem, solution }, index) => (
+              // Código de la tarjeta optimizado para alinear la Solución y el Problema
+              <div
+                key={index}
+                className="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-transparent hover:border-[#9e2d49] transition-all duration-300 transform hover:-translate-y-1"
+              >
+                {/* Bloque de Ícono y Título: Sin cambios aquí, se ve bien */}
+                <div className="flex items-start mb-4">
+                  <div className="p-2 rounded-lg mr-4 bg-[#9e2d49]/10 flex-shrink-0">
+                    <Icon className="text-[#9e2d49] w-6 h-6" />
+                  </div>
+                  <h3 className="font-bold text-xl text-[#210110] leading-snug pt-1">
+                    {title}
+                  </h3>
                 </div>
-                <h3 className="font-semibold text-lg text-[#210110]">
-                  {title}
-                </h3>
+
+                {/* Problema (Alineado) */}
+                {/* Se mantiene la línea izquierda y el padding interno (pl-3) */}
+                <div className="text-gray-600 text-sm mb-4 leading-relaxed border-l-2 border-red-400 pl-3">
+                  <span className="font-bold text-red-600 uppercase text-xs block mb-1">
+                    El Problema
+                  </span>
+                  {problem}
+                </div>
+
+                {/* Solución (Alineado y Destacado) */}
+                {/* Se reemplaza el p-2 y los márgenes negativos por un padding vertical simple (py-3) 
+      y se usa padding horizontal (pl-3) para alinearlo con el Problema. */}
+                <div className="text-gray-800 text-sm leading-relaxed border-l-2 border-[#9e2d49] pl-3 py-3 bg-[#9e2d49]/5 rounded-md">
+                  <span className="font-bold text-[#9e2d49] uppercase text-xs block mb-1">
+                    La Solución Locus
+                  </span>
+                  {solution}
+                </div>
               </div>
-
-              {/* PROBLEMA: Etiqueta usando el color oscuro del texto */}
-              <p className="text-gray-600 text-sm mb-2 leading-relaxed">
-                <span className="font-medium text-[#210110]">Problema: </span>
-                {problem}
-              </p>
-
-              {/* SOLUCIÓN: Etiqueta usando el color primario de la marca (Locus) */}
-              <p className="text-gray-800 text-sm leading-relaxed">
-                <span className="font-medium text-[#9e2d49]">Solución: </span>
-                {solution}
-              </p>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>
