@@ -1,23 +1,18 @@
 "use client";
-import React from "react";
-import { CheckCircle, Zap, TrendingUp, HandCoins } from "lucide-react";
+import { CheckCircle, Zap, TrendingUp } from "lucide-react";
 
 export const FreeUntilSection = () => {
   return (
     <section className="bg-[#F5F8EB] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        {/* Icono destacado */}
-        <div className="flex justify-center mb-4">
-          <HandCoins className="w-10 h-10 text-[#DD0C21]" />
-        </div>
 
         {/* Título principal */}
         <h2 className="text-4xl font-extrabold text-[#DD0C21] mb-4">
           Gratis hasta que vendas $275.000
         </h2>
         <p className="text-lg text-[#333] max-w-2xl mx-auto mb-12">
-          En Locus creemos que **solo deberías pagar cuando ves resultados
-          reales.** Por eso podés usar la plataforma sin costo hasta alcanzar{" "}
+          En Locus creemos que <strong>solo deberías pagar cuando ves resultados
+          reales.</strong> Por eso podés usar la plataforma sin costo hasta alcanzar{" "}
           <span className="font-semibold">$275.000 en ventas</span>.
         </p>
       </div>
