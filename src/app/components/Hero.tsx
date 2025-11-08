@@ -55,6 +55,11 @@ export const Hero: React.FC = () => {
             alcanzar nuevos niveles de facturación. Escalá sin costos crecientes
             y mantené el <strong>100% de tu margen</strong>.
           </p>
+          <p className="text-lg text-gray-700 mt-4">
+  Usá Locus <strong>gratis hasta que vendas $275.000</strong>. 
+  Probá sin riesgo, pagás recién cuando tu negocio crece.
+</p>
+
 
           {/* CTA */}
           <div className="mt-8 sm:mt-10 flex justify-center lg:justify-start">

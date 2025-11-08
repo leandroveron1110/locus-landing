@@ -11,6 +11,7 @@ import { MoreThanCommissions } from "./components/MoreThanCommissions";
 import { OptimizedPainPointsSection } from "./components/PainPointsSection";
 import { LocationsInProgress } from "./components/LocationsInProgress";
 import { CommunityGrowthSection } from "./components/CommunityGrowthSection";
+import { FreeUntilSection } from "./components/FreeUntilSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <OptimizedBeforeAfterLocus />
           <OptimizedPainPointsSection />
           <Calculator />
+          <FreeUntilSection />
           <MoreThanCommissions />
           <HowItWorks />
           <ComparisonCards />
